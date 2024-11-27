@@ -55,15 +55,15 @@ export default function Header(headerProps: headerProps) {
                 : headerProps.title}
             </Text>
           </View>
-
+          {/* 메뉴 */}
           <View style={styles.menuView}>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => {
                 navigate.push("/");
               }}
             >
               <BuildingIcon />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity onPress={toggleMenu}>
               <MenuIcon />
             </TouchableOpacity>

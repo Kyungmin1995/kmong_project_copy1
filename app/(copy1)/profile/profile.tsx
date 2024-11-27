@@ -39,7 +39,7 @@ export default function Profile() {
               <ImageBackground
                 style={{
                   width: width * 100,
-                  height: height * 100,
+                  height: width * 100,
                   backgroundColor: "#F4F2F7",
                 }}
                 source={require("@/assets/images/MenuScreen/yunzi.png")}
