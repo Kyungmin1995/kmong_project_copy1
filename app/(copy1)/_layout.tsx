@@ -14,6 +14,12 @@ export default function StackLayout() {
         <Stack.Screen
           name="index"
           options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="watchlist"
+          options={{
             title: "관심 목록",
             headerShown: false,
           }}
@@ -39,6 +45,7 @@ export default function StackLayout() {
             headerShown: false,
           }}
         />
+        {/* 채팅방 */}
         <Stack.Screen
           name="detail"
           options={{

@@ -20,8 +20,6 @@ export default function MenuScreen({ menu, setMenu }) {
     closeMenu();
     navigate.push({
       pathname: "/" + path,
-      // params: {
-      // },
     });
   };
 
@@ -83,7 +81,7 @@ export default function MenuScreen({ menu, setMenu }) {
           </Pressable>
         </View>
         <View style={styles.menuContent}>
-          <Pressable onPress={() => navigation("")}>
+          <Pressable onPress={() => navigation("watchlist")}>
             <View style={styles.row}>
               <Image
                 source={require("../assets/images/MenuScreen/bookmark.png")}
@@ -93,14 +91,14 @@ export default function MenuScreen({ menu, setMenu }) {
               <Text style={styles.menutext}>관심 목록</Text>
             </View>
           </Pressable>
-          <View style={styles.row}>
+          {/* <View style={styles.row}>
             <Image
               source={require("../assets/images/MenuScreen/sell.png")}
               style={styles.icon}
               resizeMode="contain"
             />
             <Text style={styles.menutext}>집 내놓기</Text>
-          </View>
+          </View> */}
 
           <Pressable onPress={() => navigation("post")}>
             <View style={styles.row}>

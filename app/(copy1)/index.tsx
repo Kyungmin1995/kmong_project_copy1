@@ -24,46 +24,7 @@ export default function Post() {
         }}
       >
         <Header />
-        <View style={styles.content}>
-          <View style={{ gap: height * 20 }}>
-            <View style={styles.item}>
-              <ImageBackground
-                style={{
-                  width: width * 165,
-                  height: height * 110,
-                  backgroundColor: "#F4F2F7",
-                }}
-                source={require("@/assets/images/List/item1.png")}
-                resizeMode={"cover"} // 'cover', 'contain', 'stretch', 'repeat', 'center'
-              />
-              <View style={{ justifyContent: "space-between" }}>
-                <View style={{ gap: height * 1 }}>
-                  <Text style={styles.subtitleText}>태안군 감자마을</Text>
-                  <Text style={styles.text}>A구역 2호</Text>
-                </View>
-                <Text style={styles.subtitleText}>매매 1000만원</Text>
-              </View>
-            </View>
-            <View style={styles.item}>
-              <ImageBackground
-                style={{
-                  width: width * 165,
-                  height: height * 110,
-                  backgroundColor: "#F4F2F7",
-                }}
-                source={require("@/assets/images/List/item2.png")}
-                resizeMode={"cover"} // 'cover', 'contain', 'stretch', 'repeat', 'center'
-              />
-              <View style={{ justifyContent: "space-between" }}>
-                <View style={{ gap: height * 1 }}>
-                  <Text style={styles.subtitleText}>00시 토마토마을</Text>
-                  <Text style={styles.text}>A구역 8호</Text>
-                </View>
-                <Text style={styles.subtitleText}>매매 1000만원</Text>
-              </View>
-            </View>
-          </View>
-        </View>
+        <View style={styles.content}></View>
       </View>
     </SafeAreaView>
   );

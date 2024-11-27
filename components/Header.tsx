@@ -1,6 +1,6 @@
 import { height, screenHeight, width } from "@/globalDimension";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuScreen from "@/components/MenuScreen";
 import BackIcon from "@/assets/icon/back.svg";
 import MenuIcon from "@/assets/icon/menu.svg";
@@ -44,20 +44,22 @@ export default function Header(headerProps: headerProps) {
             </TouchableOpacity>
             {/* 제목 */}
             <Text style={styles.headerText}>
-              {currentTitle === "index"
-                ? "관심 목록"
-                : currentTitle === "post"
+              {currentTitle === "post"
                 ? "내가 쓴글/댓글"
+                : currentTitle === "watchlist"
+                ? "관심 목록"
                 : currentTitle === "chat"
                 ? "채팅"
-                : route.params?.title}
+                : currentTitle === "profile"
+                ? "프로필 설정"
+                : headerProps.title}
             </Text>
           </View>
 
           <View style={styles.menuView}>
             <TouchableOpacity
               onPress={() => {
-                alert("개발예정입니다");
+                navigate.push("/");
               }}
             >
               <BuildingIcon />
@@ -68,7 +70,10 @@ export default function Header(headerProps: headerProps) {
           </View>
         </View>
 
-        <MenuScreen menu={menu} setMenu={setMenu} />
+        <MenuScreen
+          menu={currentTitle === "index" ? !menu : menu}
+          setMenu={setMenu}
+        />
       </View>
     </>
   );

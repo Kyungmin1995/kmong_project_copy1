@@ -20,7 +20,7 @@ export default function Chat() {
 
   const navigation = (title: string, data: any) => {
     navigate.push({
-      pathname: "/detail",
+      pathname: "/chat/detail",
       params: {
         title,
         data,
@@ -235,7 +235,7 @@ export default function Chat() {
         >
           <Pressable
             style={{ flexDirection: "row" }}
-            onPress={() => navigation("A 7호 한혜인", "넵 감사합니당")}
+            onPress={() => navigation("넵 감사합니당", "넵 감사합니당")}
           >
             <View style={styles.chatItem}>
               <View
